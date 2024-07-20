@@ -17,11 +17,11 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100053549552408",
-    "61557118090040",
-    "100041394069745",
-    "61560240322838",
-		"61560931561254"
+    "100041841881488",
+    "",
+    "",
+    "",
+		""
   ],
   "whiteListMode": {
     "enable": false,
@@ -33,7 +33,7 @@
   "GENDER": "MALE",
   "nickNameBot": "Yazkybot",
   "FACEBOOK": "https://www.facebook.com/swordigo.swordslush",
-  "prefix": "✓",
+  "prefix": "-",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
