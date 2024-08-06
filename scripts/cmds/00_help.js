@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "🇵🇭|𝗬𝗔𝗭𝗞𝗬 𝗔𝗜";
+const doNotDelete = "💕❤️Bruno❤️💕";
 /** 
 * @author NTKhang
 * @author: do not delete it
@@ -12,9 +12,9 @@ const doNotDelete = "🇵🇭|𝗬𝗔𝗭𝗞𝗬 𝗔𝗜";
 
 module.exports = {
 	config: {
-		name: "help4",
-		version: "1.17",
-		author: "Aesther",
+		name: "help",
+		version: "1.18",
+		author: "NTKhang",
 		countDown: 5,
 		role: 0,
 		shortDescription: {
@@ -25,7 +25,7 @@ module.exports = {
 			vi: "Xem cách sử dụng của các lệnh",
 			en: "View command usage"
 		},
-		category: "info",
+		category: "box chat",
 		guide: {
 			vi: "   {pn} [để trống | <số trang> | <tên lệnh>]"
 				+ "\n   {pn} <command name> [-u | usage | -g | guide]: chỉ hiển thị phần hướng dẫn sử dụng lệnh"
@@ -43,15 +43,58 @@ module.exports = {
 
 	langs: {
 		vi: {
-			help: "╭─────────────✿\n『%1』\n├─────⭔\n│ Trang [ %2/%3 ]\n│ Hiện tại bot có %4 lệnh có thể sử dụng\n│ » Gõ %5help <số trang> để xem danh sách các lệnh\n│ » Gõ %5help để xem chi tiết cách sử dụng lệnh đó\n├────────❀\n│ %6\n╰─────────────✿",
-			attechment:fs.createReadStream("anjarara.jpg"),
-			help2: "%1├───────❀\n│ » Hiện tại bot có %2 lệnh có thể sử dụng\n│ » Gõ %3help <tên lệnh> để xem chi tiết cách sử dụng lệnh đó\n│ %4\n╰─────────────✿",
+			help: "╭─────────────⭓"
+				+ "\n%1"
+				+ "\n├─────⭔"
+				+ "\n│ Trang [ %2/%3 ]"
+				+ "\n│ Hiện tại bot có %4 lệnh có thể sử dụng"
+				+ "\n│ » Gõ %5help <số trang> để xem danh sách các lệnh"
+				+ "\n│ » Gõ %5help để xem chi tiết cách sử dụng lệnh đó"
+				+ "\n├────────⭔"
+				+ "\n│ %6"
+				+ "\n╰─────────────⭓",
+			help2: "%1├───────⭔"
+				+ "\n│ » Hiện tại bot có %2 lệnh có thể sử dụng"
+				+ "\n│ » Gõ %3help <tên lệnh> để xem chi tiết cách sử dụng lệnh đó"
+				+ "\n│ %4"
+				+ "\n╰─────────────⭓",
 			commandNotFound: "Lệnh \"%1\" không tồn tại",
-			getInfoCommand: "╭── NAME ────✿\n│ %1\n├── INFO\n│ Mô tả: %2\n│ Các tên gọi khác: %3\n│ Các tên gọi khác trong nhóm bạn: %4\n│ Version: %5\n│ Role: %6\n│ Thời gian mỗi lần dùng lệnh: %7s\n│ Author: %8\n├── Usage\n│%9\n├── Notes\n│ Nội dung bên trong <XXXXX> là có thể thay đổi\n│ Nội dung bên trong [a|b|c] là a hoặc b hoặc c\n╰──────❀",
-			onlyInfo: "╭── INFO ────✿\n│ Tên lệnh: %1\n│ Mô tả: %2\n│ Các tên gọi khác: %3\n│ Các tên gọi khác trong nhóm bạn: %4\n│ Version: %5\n│ Role: %6\n│ Thời gian mỗi lần dùng lệnh: %7s\n│ Author: %8\n╰─────────────✿",
-			onlyUsage: "╭── USAGE ────✿\n│%1\n╰─────────────✿",
-			onlyAlias: "╭── ALIAS ────✿\n│ Các tên gọi khác: %1\n│ Các tên gọi khác trong nhóm bạn: %2\n╰─────────────✿",
-			onlyRole: "╭── ROLE ────✿\n│%1\n╰─────────────✿",
+			getInfoCommand: "╭── NAME ────⭓"
+				+ "\n│ %1"
+				+ "\n├── INFO"
+				+ "\n│ Mô tả: %2"
+				+ "\n│ Các tên gọi khác: %3"
+				+ "\n│ Các tên gọi khác trong nhóm bạn: %4"
+				+ "\n│ Version: %5"
+				+ "\n│ Role: %6"
+				+ "\n│ Thời gian mỗi lần dùng lệnh: %7s"
+				+ "\n│ Author: %8"
+				+ "\n├── USAGE"
+				+ "\n│%9"
+				+ "\n├── NOTES"
+				+ "\n│ Nội dung bên trong <XXXXX> là có thể thay đổi"
+				+ "\n│ Nội dung bên trong [a|b|c] là a hoặc b hoặc c"
+				+ "\n╰──────⭔",
+			onlyInfo: "╭── INFO ────⭓"
+				+ "\n│ Tên lệnh: %1"
+				+ "\n│ Mô tả: %2"
+				+ "\n│ Các tên gọi khác: %3"
+				+ "\n│ Các tên gọi khác trong nhóm bạn: %4"
+				+ "\n│ Version: %5"
+				+ "\n│ Role: %6"
+				+ "\n│ Thời gian mỗi lần dùng lệnh: %7s"
+				+ "\n│ Author: %8"
+				+ "\n╰─────────────⭓",
+			onlyUsage: "╭── USAGE ────⭓"
+				+ "\n│%1"
+				+ "\n╰─────────────⭓",
+			onlyAlias: "╭── ALIAS ────⭓"
+				+ "\n│ Các tên gọi khác: %1"
+				+ "\n│ Các tên gọi khác trong nhóm bạn: %2"
+				+ "\n╰─────────────⭓",
+			onlyRole: "╭── ROLE ────⭓"
+				+ "\n│%1"
+				+ "\n╰─────────────⭓",
 			doNotHave: "Không có",
 			roleText0: "0 (Tất cả người dùng)",
 			roleText1: "1 (Quản trị viên nhóm)",
@@ -61,14 +104,58 @@ module.exports = {
 			pageNotFound: "Trang %1 không tồn tại"
 		},
 		en: {
-			help: "『🌊𝗖𝗠𝗗 𝗟𝗜𝗦𝗧🔖🌊』\n\n%1\n✶⊶⊷⊶⊷❍\n 𝗣𝗮𝗴𝗲 [ %2/%3 ]\n➤🌸 𝙸 𝚑𝚊𝚟𝚎 𝙰𝚌𝚝𝚞𝚊𝚕𝚕𝚢「 %4 」𝗖𝗠𝗗s \n➤🌸 𝗧𝗬𝗣𝗘: %5help <𝙿𝙰𝙶𝙴> t𝙾 𝚝𝚑𝚎 𝚟𝚒𝚎𝚠 𝚕𝚒𝚜𝚝 𝚘𝚏 𝙲𝚖𝚍𝚜\n➤🌸 » 𝗧𝗬𝗣𝗘: %5help 𝚃𝚘 𝚝𝚑𝚎 𝚍𝚎𝚝𝚊𝚒𝚕𝚜 𝚘𝚏 𝚑𝚘𝚠 𝚝𝚘 𝚞𝚜𝚎 𝚝𝚑𝚎 𝙲𝚘𝚖𝚖𝚊𝚖𝚍\n๑۩ ,¸¸,ø¤º°`°๑۞๑\n│ %6\n✶⊶⊷⊶⊷❍",
-			help2: "%1✶⊶⊷⊶⊷❍⊶⊷⊶⊷✶\n》🌸𝚃𝚑𝚎 𝚋𝚘𝚝 𝚑𝚊𝚜 〚%2〛 𝗖𝗠𝗗𝚜 𝚝𝚑𝚊𝚝 𝚢𝚘𝚞 𝙲𝚊𝚗 𝚄𝚜𝚎🎐\n》🌸⊰⊹ 𝗧𝗬𝗣𝗘: %3help ⊹⊱ 𝚝𝚘 𝚟𝚒𝚎𝚠 𝚍𝚎𝚝𝚊𝚒𝚕𝚜 𝚘𝚏 𝙷𝚘𝚠 𝚝𝚘 𝚞𝚜𝚎 𝚃𝚑𝚊𝚝𝚜 𝙲𝚖𝚍𝚜\n🎀 ×º°”`˜”°º× 𝐁𝐨𝐭:\n%4\n☆♬○♩●♪♪●♩○♬☆",
-			commandNotFound: "𝗖𝗠𝗗 \"『%1』\" 𝙳𝚘𝚎𝚜 𝙴𝚡𝚒𝚜𝚝",
-			getInfoCommand: "╭── NAME ────✿\n %1\n├── INFO\n│ Description: %2\n│ Other names: %3\n│ Other names in your group: %4\n│ Version: %5\n│ Role: %6\n│ Time per command: %7s\n│ Author: %8\n├── Usage\n%9\n├── Notes\n│ The content inside <XXXXX> can be changed\n│ The content inside [a|b|c] is a or b or c\n╰──────❀",
-			onlyInfo: "╭── INFO ────✿\n│ Command name: %1\n│ Description: %2\n│ Other names: %3\n│ Other names in your group: %4\n│ Version: %5\n│ Role: %6\n│ Time per command: %7s\n│ Author: %8\n╰─────────────✿",
-			onlyUsage: "╭── USAGE ────✿\n│%1\n╰─────────────✿",
-			onlyAlias: "╭── ALIAS ────✿\n│ Other names: %1\n│ Other names in your group: %2\n╰─────────────✿",
-			onlyRole: "╭── ROLE ────✿\n│%1\n╰─────────────✿",
+			help: "╭─────────────⭓"
+				+ "\n%1"
+				+ "\n├─────⭔"
+				+ "\n│ Page [ %2/%3 ]"
+				+ "\n│ Currently, the bot has %4 commands that can be used"
+				+ "\n│ » Type %5help <page> to view the command list"
+				+ "\n│ » Type %5help to view the details of how to use that command"
+				+ "\n├────────⭔"
+				+ "\n│ %6"
+				+ "\n╰─────────────⭓",
+			help2: "%1├───────⭔"
+				+ "\n│ » Currently, the bot has %2 commands that can be used"
+				+ "\n│ » Type %3help <command name> to view the details of how to use that command"
+				+ "\n│ %4"
+				+ "\n╰─────────────⭓",
+			commandNotFound: "Command \"%1\" does not exist",
+			getInfoCommand: "╭── NAME ────⭓"
+				+ "\n│ %1"
+				+ "\n├── INFO"
+				+ "\n│ Description: %2"
+				+ "\n│ Other names: %3"
+				+ "\n│ Other names in your group: %4"
+				+ "\n│ Version: %5"
+				+ "\n│ Role: %6"
+				+ "\n│ Time per command: %7s"
+				+ "\n│ Author: %8"
+				+ "\n├── USAGE"
+				+ "\n│%9"
+				+ "\n├── NOTES"
+				+ "\n│ The content inside <XXXXX> can be changed"
+				+ "\n│ The content inside [a|b|c] is a or b or c"
+				+ "\n╰──────⭔",
+			onlyInfo: "╭── INFO ────⭓"
+				+ "\n│ Command name: %1"
+				+ "\n│ Description: %2"
+				+ "\n│ Other names: %3"
+				+ "\n│ Other names in your group: %4"
+				+ "\n│ Version: %5"
+				+ "\n│ Role: %6"
+				+ "\n│ Time per command: %7s"
+				+ "\n│ Author: %8"
+				+ "\n╰─────────────⭓",
+			onlyUsage: "╭── USAGE ────⭓"
+				+ "\n│%1"
+				+ "\n╰─────────────⭓",
+			onlyAlias: "╭── ALIAS ────⭓"
+				+ "\n│ Other names: %1"
+				+ "\n│ Other names in your group: %2"
+				+ "\n╰─────────────⭓",
+			onlyRole: "╭── ROLE ────⭓"
+				+ "\n│%1"
+				+ "\n╰─────────────⭓",
 			doNotHave: "Do not have",
 			roleText0: "0 (All users)",
 			roleText1: "1 (Group administrators)",
@@ -113,7 +200,7 @@ module.exports = {
 					else if (value.config.shortDescription)
 						shortDescription = checkLangObject(value.config.shortDescription, langCode);
 					if (shortDescription)
-						describe += `:\n 🎐  ${cropContent(shortDescription.charAt(0).toUpperCase() + shortDescription.slice(1))}`;
+						describe += `: ${cropContent(shortDescription.charAt(0).toUpperCase() + shortDescription.slice(1))}`;
 					arrayInfo.push({
 						data: describe,
 						priority: value.priority || 0
@@ -128,33 +215,31 @@ module.exports = {
 
 				const returnArray = allPage[page - 1] || [];
 				const startNumber = (page - 1) * numberOfOnePage + 1;
-				msg += (returnArray || []).reduce((text, item, index) => text += `》➤ ${index + startNumber}${index + startNumber < 10 ? " " : ""}.⊱─❊${item.data}\n`, '').slice(0, -1);
+				msg += (returnArray || []).reduce((text, item, index) => text += `│ ${index + startNumber}${index + startNumber < 10 ? " " : ""}. ${item.data}\n`, '').slice(0, -1);
 				await message.reply(getLang("help", msg, page, totalPage, commands.size, prefix, doNotDelete));
 			}
 			else if (sortHelp == "category") {
-	let categoryCommands = new Map(); // Map to store commands by category
+				for (const [, value] of commands) {
+					if (value.config.role > 1 && role < value.config.role)
+						continue; // if role of command > role of user => skip
+					const indexCategory = arrayInfo.findIndex(item => (item.category || "NO CATEGORY") == (value.config.category?.toLowerCase() || "NO CATEGORY"));
 
-	for (const [name, value] of commands) {
-		if (value.config.role > 1 && role < value.config.role) {
-			continue; // Skip commands the user doesn't have permission for.
-		}
-
-		const categoryName = value.config.category || "No Category";
-		const circularSymbol = "\n🌊"; // Add your desired circular symbol here
-
-		if (!categoryCommands.has(categoryName)) {
-			categoryCommands.set(categoryName, []);
-		}
-
-		categoryCommands.get(categoryName).push(`${circularSymbol} ${name}`);
-	}
-
-	for (const [category, commands] of categoryCommands) {
-		msg += `》★─⊰【${category}】⊱✮\n▣「${commands.join(" ")}」\n\n`;
-	}
-
-	message.reply(getLang("help2", msg, commands.size, prefix, doNotDelete));
-}
+					if (indexCategory != -1)
+						arrayInfo[indexCategory].names.push(value.config.name);
+					else
+						arrayInfo.push({
+							category: value.config.category.toLowerCase(),
+							names: [value.config.name]
+						});
+				}
+				arrayInfo.sort((a, b) => (a.category < b.category ? -1 : 1));
+				arrayInfo.forEach((data, index) => {
+					const categoryUpcase = `${index == 0 ? `╭` : `├`}─── ${data.category.toUpperCase()} ${index == 0 ? "⭓" : "⭔"}`;
+					data.names = data.names.sort().map(item => item = `│ ${item}`);
+					msg += `${categoryUpcase}\n${data.names.join("\n")}\n`;
+				});
+				message.reply(getLang("help2", msg, commands.size, prefix, doNotDelete));
+			}
 		}
 		// ———————————— COMMAND DOES NOT EXIST ———————————— //
 		else if (!command && args[0]) {
@@ -204,7 +289,7 @@ module.exports = {
 				else
 					description = getLang("doNotHave");
 
-			let sendWithAttachment = false ; // check subcommand need send with attachment or not
+			let sendWithAttachment = false; // check subcommand need send with attachment or not
 
 			if (args[1]?.match(/^-g|guide|-u|usage$/)) {
 				formSendMessage.body = getLang("onlyUsage", guideBody.split("\n").join("\n│"));
